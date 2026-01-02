@@ -1,7 +1,7 @@
 
-  # Portfolio Website for Team Pixel
+# Portfolio Website for TEAM PIXELL
 
-  This is a code bundle for Portfolio Website for Team Pixel. The original project is available at https://www.figma.com/design/JB0WKg4d1XkdbuIDgXzCkq/Portfolio-Website-for-Team-Pixel.
+This is a code bundle for Portfolio Website for TEAM PIXELL. The original project is available at https://www.figma.com/design/JB0WKg4d1XkdbuIDgXzCkq/Portfolio-Website-for-TEAM-PIXELL.
 
   ## Running the code
 

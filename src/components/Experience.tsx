@@ -49,7 +49,7 @@ export function Experience() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
             >
               <Star className="size-4 icon-golden" />
-              The Team Pixel Experience
+              The TEAM PIXELL Experience
               <Star className="size-4 icon-golden" />
             </motion.div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">

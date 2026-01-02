@@ -9,7 +9,7 @@ const testimonials = [
     company: 'Luxe Fashion Co.',
     avatar: 'SM',
     rating: 5,
-    text: 'Team Pixel transformed our entire digital presence. The ROI we achieved in just 6 months exceeded our yearly projections. Their strategic approach and attention to detail is unmatched.',
+    text: 'TEAM PIXELL transformed our entire digital presence. The ROI we achieved in just 6 months exceeded our yearly projections. Their strategic approach and attention to detail is unmatched.',
     results: '+380% ROI',
     gradient: 'from-blue-500 to-cyan-500'
   },
@@ -19,7 +19,7 @@ const testimonials = [
     company: 'TechFlow Solutions',
     avatar: 'MC',
     rating: 5,
-    text: 'Working with Team Pixel was a game-changer. They didn\'t just build us a platform; they crafted a complete growth engine. The technical excellence combined with marketing prowess is rare.',
+    text: 'Working with TEAM PIXELL was a game-changer. They didn\'t just build us a platform; they crafted a complete growth engine. The technical excellence combined with marketing prowess is rare.',
     results: '50K+ Users',
     gradient: 'from-cyan-500 to-indigo-500'
   },
@@ -39,7 +39,7 @@ const testimonials = [
     company: 'HealthConnect',
     avatar: 'DT',
     rating: 5,
-    text: 'Team Pixel\'s holistic approach to digital strategy helped us scale from a startup to a market leader. Their expertise in SEO and development created a foundation for sustainable growth.',
+    text: 'TEAM PIXELL\'s holistic approach to digital strategy helped us scale from a startup to a market leader. Their expertise in SEO and development created a foundation for sustainable growth.',
     results: '25K+ Patients',
     gradient: 'from-purple-500 to-blue-500'
   },
@@ -49,7 +49,7 @@ const testimonials = [
     company: 'Prime Properties',
     avatar: 'LA',
     rating: 5,
-    text: 'The lead generation campaigns exceeded every expectation. The quality of leads and conversion rates have been phenomenal. Team Pixel truly understands high-value customer acquisition.',
+    text: 'The lead generation campaigns exceeded every expectation. The quality of leads and conversion rates have been phenomenal. TEAM PIXELL truly understands high-value customer acquisition.',
     results: '$45M in Sales',
     gradient: 'from-blue-600 to-cyan-500'
   },

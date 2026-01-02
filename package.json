@@ -1,17 +1,14 @@
 {
-  "name": "portfolio-website-for-team-pixel",
+  "name": "portfolio-website-for-team-pixell",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-
-  "homepage": "https://tanu123t.github.io/TEAMPIXEL/",
-
+  "homepage": "https://tanu123t.github.io/TEAMPIXELL/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "deploy": "gh-pages -d build"
   },
-
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-alert-dialog": "^1.1.6",
@@ -57,7 +54,6 @@
     "tailwind-merge": "*",
     "vaul": "^1.1.2"
   },
-
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20.10.0",

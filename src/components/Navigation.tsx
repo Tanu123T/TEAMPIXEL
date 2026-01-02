@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { smoothScrollToId, smoothScrollToTop } from '../utils/smoothScroll';
 
 export function Navigation() {
+  const baseUrl = (import.meta as any).env?.BASE_URL ?? '/';
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('top');
@@ -83,16 +84,16 @@ export function Navigation() {
                   className="absolute -inset-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity"
                 />
                 <div className="relative w-14 h-14 flex items-center justify-center">
-                  <img
-                    src="/logo.png"
-                    alt="Team Pixel Logo"
+                        <img
+                          src={baseUrl + 'logo.png'}
+                          alt="TEAM PIXELL Logo"
                     className="w-full h-full object-contain filter drop-shadow-[0_0_12px_rgba(59,130,246,0.6)] group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,1)] transition-all duration-300 group-hover:brightness-110"
                   />
                 </div>
               </div>
               <div className="flex flex-col items-start">
                 <span className="text-lg tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                  Team Pixel
+                  TEAM PIXELL
                 </span>
                 <span className="text-xs text-blue-400/70">Digital Excellence</span>
               </div>

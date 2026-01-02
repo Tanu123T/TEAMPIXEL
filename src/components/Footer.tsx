@@ -50,7 +50,7 @@ export function Footer() {
                   <span className="text-white">TP</span>
                 </div>
                 <div className="text-xl tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                  Team Pixel
+                  TEAM PIXELL
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -166,7 +166,7 @@ export function Footer() {
           >
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-muted-foreground">
-                © {currentYear} Team Pixel. All rights reserved.
+                © {currentYear} TEAM PIXELL. All rights reserved.
               </p>
               
               <div className="flex items-center gap-6">

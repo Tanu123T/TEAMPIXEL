@@ -42,14 +42,14 @@ export function About() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           >
             <div className="w-12 h-px bg-gradient-to-r from-blue-500 to-transparent" />
-            About Team Pixel
+            About TEAM PIXELL
           </motion.div>
           
           {/* Main content */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                Team Pixel is a boutique digital agency built for brands that value precision, clarity, and results.
+                TEAM PIXELL is a boutique digital agency built for brands that value precision, clarity, and results.
               </h2>
               
               <div className="space-y-6 text-lg text-muted-foreground">

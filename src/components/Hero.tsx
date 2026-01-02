@@ -169,7 +169,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl"
           >
-            Team Pixel partners with ambitious brands to deliver refined digital experiences, 
+            TEAM PIXELL partners with ambitious brands to deliver refined digital experiences, 
             performance-driven growth, and measurable impact.
           </motion.p>
           
