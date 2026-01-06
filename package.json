@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "homepage": "https://tanu123t.github.io/TEAMPIXELL/",
+  "homepage": "https://teampixel.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
