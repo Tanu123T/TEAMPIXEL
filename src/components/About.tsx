@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, TrendingUp, Award, Users } from 'lucide-react';
+import { Target, TrendingUp, Award, Users, ArrowRight } from 'lucide-react';
 
 const stats = [
   { icon: Target, value: '200+', label: 'Projects Delivered' },
@@ -14,53 +14,70 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   
   return (
-    <section ref={ref} className="py-32 px-6 relative overflow-hidden bg-white">
+    <section ref={ref} className="py-32 px-6 relative overflow-hidden bg-slate-50">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E6ECF4] to-transparent" />
+      
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
           <motion.div
-            initial={{ opacity: 1, y: 12 }}
-            animate={isInView ? { y: 0 } : {}}
-            transition={{ duration: 0.3 }}
-            className="space-y-8"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="space-y-10"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F2A44]">
-              TEAM PIXELL is a boutique digital agency built for brands that value precision, clarity, and results.
-            </h2>
+            <div className="space-y-4">
+              <span className="text-sm font-bold tracking-[0.2em] text-[#0F2A44] uppercase">Our Story</span>
+              <h2 className="text-4xl md:text-6xl font-bold text-[#0F2A44] leading-tight tracking-tight">
+                Boutique Precision. <br />
+                <span className="text-gradient-navy">Global Impact.</span>
+              </h2>
+            </div>
             
-            <div className="space-y-6 text-lg text-[#1E293B]">
+            <div className="space-y-6 text-xl text-[#475569] leading-relaxed">
               <p>
-                We operate at the intersection of performance marketing, 
-                technology, and creative excellence, crafting digital systems that scale businesses 
+                TEAM PIXELL operates at the intersection of performance marketing, 
+                technology, and creative excellence. We craft digital systems that scale businesses 
                 while elevating brand perception.
               </p>
               
               <p>
-                Every decision we make is intentional. Every execution is measured.
+                Every decision we make is intentional. Every execution is measured. We don't just build websites; we architect revenue engines.
               </p>
+            </div>
+
+            <div className="pt-4">
+              <button className="flex items-center gap-3 text-[#0F2A44] font-bold group">
+                Learn more about our methodology 
+                <div className="size-8 rounded-full bg-[#0F2A44] flex items-center justify-center text-white group-hover:translate-x-2 transition-transform">
+                  <ArrowRight className="size-4" />
+                </div>
+              </button>
             </div>
           </motion.div>
           
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat) => {
-                const Icon = stat.icon;
-                return (
-                  <motion.div
-                    key={stat.label}
-                    whileHover={{ scale: 1.03 }}
-                    className="p-8 bg-white border border-[#E6ECF4] rounded-2xl hover-card-navy transition-all"
-                  >
-                    <Icon className="size-8 text-[#0F2A44] mb-4" />
-                    <div className="text-3xl font-bold text-[#0F2A44] mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-[#475569]">
-                      {stat.label}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+          <div className="relative grid grid-cols-2 gap-6">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="p-8 bg-white border border-[#E6ECF4] rounded-[2rem] shadow-xl shadow-[#0F2A44]/5 relative group overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#0F2A44]/[0.02] rounded-bl-[3rem]" />
+                  <Icon className="size-10 text-[#0F2A44] mb-6 group-hover:scale-110 transition-transform" />
+                  <div className="text-3xl font-black text-[#0F2A44] mb-2 tracking-tight">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-[#475569] uppercase tracking-wider">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

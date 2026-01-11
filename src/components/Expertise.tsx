@@ -6,8 +6,7 @@ import {
   Code2, 
   TrendingUp, 
   ShoppingCart, 
-  Palette, 
-  Video 
+  Palette
 } from 'lucide-react';
 
 const services = [
@@ -15,38 +14,39 @@ const services = [
     icon: Facebook,
     title: 'Meta Advertising',
     description: 'Elegantly engineered Facebook and Instagram campaigns designed to convert attention into sustained revenue.',
+    accent: 'bg-blue-50'
   },
   {
     icon: Search,
     title: 'Google Advertising',
     description: 'High-intent search and performance strategies capturing demand at the moment it matters most.',
+    accent: 'bg-slate-50'
   },
   {
     icon: Code2,
-    title: 'Website & App Development & Support',
-    description: 'Architected digital platforms built for speed, stability, and seamless user experience — supported with ongoing technical care.',
+    title: 'Development & Support',
+    description: 'Architected digital platforms built for speed, stability, and seamless user experience.',
+    accent: 'bg-indigo-50'
   },
   {
     icon: TrendingUp,
-    title: 'Search Engine Optimization',
-    description: 'A disciplined, long-term approach to organic growth through strategic search visibility and authority building.',
+    title: 'Strategic SEO',
+    description: 'A disciplined approach to organic growth through strategic search visibility and authority.',
+    accent: 'bg-cyan-50'
   },
   {
     icon: ShoppingCart,
-    title: 'Marketplace Advertising',
-    description: 'Precision-led marketplace strategies that enhance discoverability, conversions, and profitability.',
+    title: 'Marketplace Ads',
+    description: 'Precision-led marketplace strategies that enhance discoverability and profitability.',
     note: 'Quick-commerce & E-commerce',
+    accent: 'bg-blue-50'
   },
   {
     icon: Palette,
     title: 'Graphic Design',
-    description: 'Refined visual language that communicates trust, quality, and brand distinction across digital touchpoints.',
-  },
-  {
-    icon: Video,
-    title: 'Video Editing',
-    description: 'Cinematic, performance-oriented video edits crafted for ads, products, and modern storytelling.',
-  },
+    description: 'Refined visual language that communicates trust, quality, and brand distinction.',
+    accent: 'bg-slate-50'
+  }
 ];
 
 export function Expertise() {
@@ -54,35 +54,55 @@ export function Expertise() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-32 px-6 relative bg-white">
+    <section ref={ref} className="py-32 px-6 relative bg-white overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E6ECF4] to-transparent" />
+      
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="space-y-16">
-          <div className="space-y-4 text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F2A44]">
-              Capabilities That Drive Results
-            </h2>
+        <div className="space-y-20">
+          <div className="text-center space-y-4">
+            <motion.span 
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              className="text-sm font-bold tracking-[0.2em] text-[#0F2A44] uppercase"
+            >
+              Capabilities
+            </motion.span>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-6xl font-bold text-[#0F2A44] tracking-tight"
+            >
+              Driven by <span className="text-gradient-navy">Precision.</span>
+            </motion.h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => {
+            {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <motion.div
                   key={service.title}
-                  whileHover={{ scale: 1.03 }}
-                  className="p-8 bg-white border border-[#E6ECF4] rounded-2xl hover-card-navy group transition-all"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  className="p-10 bg-white border border-[#E6ECF4] rounded-[2rem] hover:border-[#0F2A44] transition-all duration-500 hover:shadow-2xl hover:shadow-[#0F2A44]/5 group"
                 >
-                  <Icon className="size-10 text-[#0F2A44] mb-6" />
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-[#0F2A44]">
+                  <div className={`size-16 rounded-2xl ${service.accent} flex items-center justify-center mb-8 group-hover:bg-[#0F2A44] transition-colors duration-500`}>
+                    <Icon className="size-8 text-[#0F2A44] group-hover:text-white transition-colors duration-500" />
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-[#0F2A44] tracking-tight">
                       {service.title}
                     </h3>
                     {service.note && (
-                      <div className="text-xs text-[#475569] font-medium">
-                        ({service.note})
-                      </div>
+                      <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-[10px] font-bold text-[#475569] uppercase tracking-wider">
+                        {service.note}
+                      </span>
                     )}
-                    <p className="text-[#1E293B] leading-relaxed">
+                    <p className="text-[#475569] leading-relaxed text-lg">
                       {service.description}
                     </p>
                   </div>
