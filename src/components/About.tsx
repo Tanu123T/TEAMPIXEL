@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, TrendingUp, Award, Users, Globe, Clock, CheckCircle, MessageSquare, ArrowRight, ShieldCheck, Trophy } from 'lucide-react';
+import { Target, TrendingUp, Award, Users, Globe, Clock, CheckCircle, MessageSquare } from 'lucide-react';
 
 const stats = [
   { icon: Target, value: '200+', label: 'Projects Delivered' },
@@ -12,8 +12,6 @@ const stats = [
   { icon: CheckCircle, value: '98%', label: 'Success Rate' },
   { icon: MessageSquare, value: '< 2 Hours', label: 'Avg. Response' },
 ];
-
-const partners = ['Google', 'Meta', 'AWS'];
 
 export function About() {
   const ref = useRef(null);
@@ -49,32 +47,6 @@ export function About() {
               <p className="text-lg italic">
                 Every decision we make is intentional. Every execution is measured.
               </p>
-            </div>
-
-            <div className="space-y-8 pt-4">
-              <div className="space-y-4">
-                <div className="flex items-center gap-2 text-sm font-bold text-[#0F2A44] uppercase tracking-wider">
-                  <ShieldCheck className="size-4" />
-                  Certified Partners
-                </div>
-                <div className="flex flex-wrap gap-4">
-                  {partners.map((partner) => (
-                    <div key={partner} className="px-6 py-3 bg-white border border-[#E6ECF4] rounded-xl text-sm font-black text-[#0F2A44] shadow-sm">
-                      {partner}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-2 text-sm font-bold text-[#0F2A44] uppercase tracking-wider">
-                  <Trophy className="size-4" />
-                  Industry Recognition
-                </div>
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#0F2A44] text-white rounded-xl shadow-lg shadow-[#0F2A44]/20">
-                  <span className="font-bold">Top 1% Digital Agencies 2025</span>
-                </div>
-              </div>
             </div>
           </motion.div>
           

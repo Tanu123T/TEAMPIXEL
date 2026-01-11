@@ -1,6 +1,7 @@
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { TrustSection } from './components/TrustSection';
 import { Expertise } from './components/Expertise';
 import { ProcessSection } from './components/ProcessSection';
 import { Contact } from './components/Contact';
@@ -17,6 +18,7 @@ export default function App() {
         <div id="about">
           <About />
         </div>
+        <TrustSection />
         <div id="expertise">
           <Expertise />
         </div>
