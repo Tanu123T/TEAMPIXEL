@@ -33,7 +33,7 @@ export function About() {
               </h2>
             </div>
             
-            <div className="space-y-8 text-xl text-[#475569] leading-relaxed">
+            <div className="space-y-6 text-xl text-[#475569] leading-relaxed">
               <p className="font-medium text-[#0F2A44]">
                 TEAM PIXELL is a boutique digital agency built for brands that value precision, clarity, and results.
               </p>
@@ -43,6 +43,9 @@ export function About() {
               <p className="text-lg italic">
                 Every decision we make is intentional. Every execution is measured.
               </p>
+              <div className="pt-4 flex items-center gap-3 text-[#0F2A44] font-bold">
+                Boutique focus. Institutional discipline.
+              </div>
             </div>
           </motion.div>
           

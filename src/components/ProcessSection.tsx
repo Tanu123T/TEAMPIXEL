@@ -177,14 +177,8 @@ export function ProcessSection() {
                         </div>
                       </div>
 
-                      <div className="pt-8 flex items-center justify-between border-t border-[#0F2A44]/5">
+                      <div className="pt-6 border-t border-[#0F2A44]/5 flex items-center justify-between">
                          <span className="text-xs font-black uppercase tracking-widest text-[#0F2A44]/40">Precision Phase</span>
-                         <motion.button 
-                           whileHover={{ x: 5 }}
-                           className="flex items-center gap-2 text-sm font-bold text-[#0F2A44] group/btn"
-                         >
-                           <ArrowRight className="size-5" />
-                         </motion.button>
                       </div>
                     </div>
                   </div>

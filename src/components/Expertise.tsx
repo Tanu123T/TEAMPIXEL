@@ -117,7 +117,7 @@ export function Expertise() {
                     
                     <div className="pt-6 border-t border-slate-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       <div className="flex items-center gap-2 text-xs font-bold text-[#0F2A44] uppercase tracking-wider">
-                        Strategic Execution <ArrowRight className="size-3" />
+                        Strategic Execution
                       </div>
                     </div>
                   </div>
