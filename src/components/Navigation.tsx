@@ -74,10 +74,10 @@ export function Navigation() {
                 />
               </div>
               <div className="flex flex-col items-start text-left">
-                <span className="text-xl font-bold tracking-tight text-[#0F2A44]">
+                <span className="text-xl font-extrabold tracking-tight text-[#0F2A44] font-brand">
                   TEAM PIXELL
                 </span>
-                <span className="text-xs text-[#475569]">Digital Excellence</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#475569]">Digital Excellence</span>
               </div>
             </motion.button>
 
