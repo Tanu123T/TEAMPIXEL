@@ -22,7 +22,7 @@ export function Navigation() {
       setScrolled(window.scrollY > 50);
 
       // Determine active section
-      const sections = ['top', 'about', 'expertise', 'process', 'portfolio', 'testimonials', 'philosophy', 'experience', 'contact'];
+      const sections = ['top', 'about', 'expertise', 'process', 'philosophy', 'experience', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -52,8 +52,6 @@ export function Navigation() {
     { label: 'About', id: 'about' },
     { label: 'Expertise', id: 'expertise' },
     { label: 'Process', id: 'process' },
-    { label: 'Portfolio', id: 'portfolio' },
-    { label: 'Testimonials', id: 'testimonials' },
     { label: 'Contact', id: 'contact' },
   ];
 
