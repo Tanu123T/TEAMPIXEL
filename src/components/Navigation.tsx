@@ -83,7 +83,7 @@ export function Navigation() {
                 <motion.div
                   className="absolute -inset-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity"
                 />
-                <div className="relative w-14 h-14 flex items-center justify-center">
+                <div className="relative w-16 h-16 flex items-center justify-center">
                         <img
                           src={baseUrl + 'logo.png'}
                           alt="TEAM PIXELL Logo"
@@ -92,7 +92,7 @@ export function Navigation() {
                 </div>
               </div>
               <div className="flex flex-col items-start">
-                <span className="text-lg tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
+                <span className="text-xl tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
                   TEAM PIXELL
                 </span>
                 <span className="text-xs text-blue-400/70">Digital Excellence</span>

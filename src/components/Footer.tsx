@@ -79,31 +79,6 @@ export function Footer() {
             </div>
             
             {/* Quick links */}
-            <div className="space-y-6">
-              <h4 className="text-sm tracking-wider text-blue-400 uppercase">Quick Links</h4>
-              <div className="space-y-3">
-                {[
-                  { label: 'Home', id: 'top' },
-                  { label: 'Our Expertise', id: 'expertise' },
-                  { label: 'Philosophy', id: 'philosophy' },
-                  { label: 'Contact', id: 'contact' },
-                ].map((link, index) => (
-                  <motion.button
-                    key={link.label}
-                    onClick={() => smoothScrollToId(link.id, { duration: 1000 })}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-                    transition={{ delay: 0.1 * index }}
-                    className="block text-sm text-muted-foreground hover:text-blue-300 transition-colors group"
-                  >
-                    <span className="relative">
-                      {link.label}
-                      <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-blue-500 group-hover:w-full transition-all duration-300" />
-                    </span>
-                  </motion.button>
-                ))}
-              </div>
-            </div>
             
             {/* Services */}
             <div className="space-y-6">
@@ -135,7 +110,7 @@ export function Footer() {
               <h4 className="text-sm tracking-wider text-blue-400 uppercase">Get in Touch</h4>
               <div className="space-y-4">
                 {[
-                  { icon: Mail, text: 'teampixel@gmail.com' },
+                  { icon: Mail, text: 'contact@teampixell.com' },
                   { icon: Phone, text: '+91 9370718105' },
                   { icon: MapPin, text: 'Global Digital Agency' },
                 ].map((contact, index) => {

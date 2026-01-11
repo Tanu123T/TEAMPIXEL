@@ -181,7 +181,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-wrap gap-3"
           >
-            {['Meta Ads', 'Google Ads', 'Technology', 'Creative'].map((service, index) => (
+            {['Meta Ads', 'Google Ads', 'SEO', 'Graphic Designing', 'Marketplace Ads'].map((service, index) => (
               <motion.div
                 key={service}
                 initial={{ opacity: 0, x: -20 }}
@@ -209,36 +209,13 @@ export function Hero() {
               <Button 
                 size="lg" 
                 className="relative gap-2 bg-blue-600 hover:bg-blue-500"
-                onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => window.open('https://wa.me/919370718105', '_blank')}
               >
                 <Zap className="size-4 icon-golden" />
                 Start a Conversation
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
-            
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-500/50 gap-2 group"
-              onClick={() => {
-                document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <Play className="size-4 group-hover:scale-110 transition-transform" />
-              View Our Work
-            </Button>
-            
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 rounded-lg border border-blue-500/30 hover:border-blue-500/50 bg-blue-500/5 hover:bg-blue-500/10 transition-all flex items-center gap-2 text-blue-300 hover:text-blue-200"
-            >
-              <MessageCircle className="size-4" />
-              <span className="text-sm text-blue-300">Quick Chat</span>
-            </motion.button>
           </motion.div>
           
           {/* Trust indicators */}
@@ -262,7 +239,7 @@ export function Hero() {
                   </motion.div>
                 ))}
               </div>
-              <span className="text-sm text-muted-foreground">100+ Happy Clients</span>
+              <span className="text-sm text-muted-foreground">50+ Happy Clients</span>
             </div>
             
             <div className="flex items-center gap-2">
@@ -280,12 +257,7 @@ export function Hero() {
                   </motion.svg>
                 ))}
               </div>
-              <span className="text-sm text-muted-foreground">5.0 Rating</span>
-            </div>
-            
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              Available Now
+              <span className="text-sm text-muted-foreground">⭐ 4.9 Rating</span>
             </div>
           </motion.div>
         </motion.div>

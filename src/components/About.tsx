@@ -3,10 +3,10 @@ import { useRef } from 'react';
 import { Target, TrendingUp, Award, Users } from 'lucide-react';
 
 const stats = [
-  { icon: Target, value: '500+', label: 'Projects Delivered', color: 'from-blue-500 to-cyan-500' },
+  { icon: Target, value: '200+', label: 'Projects Delivered', color: 'from-blue-500 to-cyan-500' },
   { icon: TrendingUp, value: '250%', label: 'Average ROI', color: 'from-cyan-500 to-blue-500' },
-  { icon: Award, value: '50+', label: 'Industry Awards', color: 'from-blue-600 to-blue-400' },
-  { icon: Users, value: '100+', label: 'Happy Clients', color: 'from-cyan-600 to-cyan-400' },
+  { icon: Award, value: '₹6 Crore+', label: 'Monthly Ad Budget Handled', color: 'from-blue-600 to-blue-400' },
+  { icon: Users, value: '50+', label: 'Happy Clients', color: 'from-cyan-600 to-cyan-400' },
 ];
 
 export function About() {

@@ -12,10 +12,6 @@ const About = lazy(() => import('./components/About').then(module => ({ default:
 const StatsSection = lazy(() => import('./components/StatsSection').then(module => ({ default: module.StatsSection })));
 const Expertise = lazy(() => import('./components/Expertise').then(module => ({ default: module.Expertise })));
 const ProcessSection = lazy(() => import('./components/ProcessSection').then(module => ({ default: module.ProcessSection })));
-const Portfolio = lazy(() => import('./components/Portfolio').then(module => ({ default: module.Portfolio })));
-const Testimonials = lazy(() => import('./components/Testimonials').then(module => ({ default: module.Testimonials })));
-const Philosophy = lazy(() => import('./components/Philosophy').then(module => ({ default: module.Philosophy })));
-const Experience = lazy(() => import('./components/Experience').then(module => ({ default: module.Experience })));
 const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 
 export default function App() {
@@ -43,23 +39,9 @@ export default function App() {
             <ProcessSection />
           </div>
           
-          <div id="portfolio">
-            <Portfolio />
+          <div id="contact">
+            <Contact />
           </div>
-          
-          <div id="testimonials">
-            <Testimonials />
-          </div>
-          
-          <div id="philosophy">
-            <Philosophy />
-          </div>
-          
-          <div id="experience">
-            <Experience />
-          </div>
-          
-          <Contact />
         </Suspense>
       </main>
       

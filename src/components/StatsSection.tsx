@@ -59,10 +59,10 @@ const mainStats = [
 ];
 
 const additionalStats = [
-  { icon: Globe, label: 'Global Reach', value: '45+ Countries' },
-  { icon: Clock, label: 'Support', value: '24/7 Available' },
+  { icon: Globe, label: 'Happy Countries', value: '45+' },
+  { icon: Clock, label: 'Available', value: '24×7' },
   { icon: Target, label: 'Success Rate', value: '98%' },
-  { icon: Zap, label: 'Avg. Response', value: '< 2 Hours' },
+  { icon: Zap, label: 'Avg. Response', value: 'Less than 2 Hours' },
 ];
 
 export function StatsSection() {
@@ -70,7 +70,7 @@ export function StatsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-32 px-6 relative overflow-hidden">
+    <section ref={ref} className="py-16 px-6 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent" />
       
@@ -99,85 +99,8 @@ export function StatsSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="space-y-16"
         >
-          {/* Section header */}
-          <div className="text-center space-y-6 max-w-3xl mx-auto">
-            <motion.div 
-              className="text-sm tracking-wider text-blue-400 uppercase flex items-center justify-center gap-2"
-              initial={{ opacity: 0, y: -20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            >
-              <TrendingUp className="size-4" />
-              By The Numbers
-              <TrendingUp className="size-4" />
-            </motion.div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-              Results That Speak For Themselves
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Our track record of excellence, backed by real metrics and measurable impact
-            </p>
-          </div>
           
           {/* Main stats grid */}
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {mainStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ 
-                    duration: 0.5,
-                    delay: 0.1 * index,
-                    type: "spring",
-                    stiffness: 100
-                  }}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative"
-                >
-                  {/* Glow effect */}
-                  <motion.div
-                    className={`absolute -inset-1 bg-gradient-to-r ${stat.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500`}
-                  />
-                  
-                  <div className="relative h-full p-8 bg-card/50 backdrop-blur-sm border border-blue-500/20 rounded-3xl group-hover:border-blue-500/40 transition-all duration-300">
-                    {/* Icon */}
-                    <motion.div
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${stat.color} p-3.5 mb-6`}
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <Icon className="w-full h-full text-white" />
-                    </motion.div>
-                    
-                    {/* Number */}
-                    <div className="space-y-2 mb-4">
-                      <div className="text-4xl md:text-5xl bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                        <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                      </div>
-                      <h3 className="text-lg text-blue-100">
-                        {stat.label}
-                      </h3>
-                    </div>
-                    
-                    {/* Description */}
-                    <p className="text-sm text-muted-foreground">
-                      {stat.description}
-                    </p>
-                    
-                    {/* Progress bar */}
-                    <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ scaleX: 1 }}
-                      transition={{ duration: 0.5 }}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
           
           {/* Additional stats */}
           <motion.div

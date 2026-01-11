@@ -123,6 +123,7 @@ export function Contact() {
                   <Button 
                     size="lg" 
                     className="relative gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white border-0 px-8 py-6 w-full md:w-auto"
+                    onClick={() => window.open('https://calendar.google.com', '_blank')}
                   >
                     <Calendar className="size-5" />
                     <span>Schedule Strategy Consultation</span>
@@ -140,6 +141,7 @@ export function Contact() {
                     size="lg" 
                     variant="outline"
                     className="gap-2 border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-500/50 bg-background/50 backdrop-blur-sm px-8 py-6 w-full md:w-auto group"
+                    onClick={() => window.location.href = 'mailto:contact@teampixell.com'}
                   >
                     <Mail className="size-5" />
                     <span className="text-foreground">Email Us</span>
