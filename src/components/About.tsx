@@ -1,16 +1,12 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, TrendingUp, Award, Users, Globe, Clock, CheckCircle, MessageSquare } from 'lucide-react';
+import { Target, TrendingUp, Award, Users } from 'lucide-react';
 
 const stats = [
   { icon: Target, value: '200+', label: 'Projects Delivered' },
   { icon: TrendingUp, value: '250%', label: 'Average ROI' },
   { icon: Award, value: '₹6 Crore+', label: 'Monthly Ad Budget Handled' },
   { icon: Users, value: '50+', label: 'Happy Clients' },
-  { icon: Globe, value: '45+', label: 'Happy Countries' },
-  { icon: Clock, value: '24×7', label: 'Available' },
-  { icon: CheckCircle, value: '98%', label: 'Success Rate' },
-  { icon: MessageSquare, value: '< 2 Hours', label: 'Avg. Response' },
 ];
 
 export function About() {
