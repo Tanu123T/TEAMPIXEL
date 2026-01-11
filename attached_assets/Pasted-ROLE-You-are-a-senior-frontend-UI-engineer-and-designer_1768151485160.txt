@@ -1,0 +1,96 @@
+ROLE:
+You are a senior frontend UI engineer and designer. Your task is to transform this website’s UI into a modern, clean, premium, SaaS-style layout using a **white background and navy blue accents**. 
+
+STRICT RULES:
+- Do NOT change any text content.
+- Do NOT change the logo.
+- Do NOT remove, rename, or reorder any sections.
+- All content must remain exactly the same.
+- All links, CTAs, and headings remain unchanged.
+- All text must be fully readable (opacity = 1, no light colors on white).
+
+GOAL:
+Make the website visually **premium, interactive, and modern**, with clear hierarchy, breathing space, subtle motion, and professional styling. Use **dark navy blue as the primary color** for headings, cards, buttons, dividers, and hover effects.
+
+STEPS:
+
+1. COLORS
+- Background: #FFFFFF
+- Headings (all levels): #0F2A44 (dark navy)
+- Body text: #1E293B (slate navy)
+- Accent text, labels, icons: #0F2A44
+- Muted text: #475569
+- Cards: white background with subtle navy border (#E6ECF4)
+- Buttons: solid dark navy background (#0F2A44), hover to slightly darker navy (#1E3A8A)
+- Links: navy (#0F2A44), hover darker navy
+
+2. SPACING & LAYOUT
+- Add generous vertical spacing between sections
+- Align text and cards neatly in a grid layout
+- Cards and feature sections should have subtle shadows
+- Maintain breathing space around headings, buttons, and images
+- Ensure visual hierarchy is clear: headings bold, body text readable
+
+3. CARDS & FEATURES
+- Each service/expertise card: white background, navy border, rounded corners
+- On hover: scale slightly (1 → 1.03) + border accent in navy
+- Use subtle drop shadows, not gradients or glows
+- Icons in cards: navy-colored
+
+4. HERO SECTION
+- Headline: bold, dark navy, fully readable
+- Subheadline: slate navy, readable
+- CTA buttons: dark navy background, white text, hover darker navy
+- Add a **large abstract/3D geometric image** on one side, with navy tones
+- Layout: text left, image right (or vice versa), balanced
+
+5. ABOUT SECTION
+- Text blocks aligned left or right, matching hero spacing
+- Supporting illustration on the opposite side
+- Illustration: abstract / modern / geometric style, navy-themed
+- Cards/statistics: white background, navy borders, subtle hover animation
+
+6. PROCESS SECTION
+- Step-by-step cards (01–06)
+- Cards: white, navy border, rounded corners
+- Hover: scale + subtle navy highlight
+- Optional connector lines between steps: navy
+
+7. IMAGES & VISUALS
+- All visuals should match **premium tech-style abstract designs**
+- Hero: large 3D or abstract illustration in navy/white
+- Expertise cards: small geometric icons
+- Process steps: small icons or abstract shapes
+- Contact section: subtle visual (illustration, geometric shape) in navy
+- Images should support layout, not overpower content
+- Use placeholders or Unsplash-style URLs if necessary
+
+8. ANIMATIONS & INTERACTIONS
+- Scroll reveal: translateY(8–12px → 0), duration 250–300ms, ease-out
+- No opacity fade from 0 (text must remain readable)
+- Hover cards: scale 1 → 1.03
+- Buttons: smooth background transition to darker navy
+- Links/icons: subtle color transition to darker navy
+- Animations must be **calm and subtle**, professional, not flashy
+
+9. RESPONSIVENESS
+- Fully mobile responsive
+- Headings and text scale for small screens
+- Cards stack neatly on mobile
+- Hover and motion effects reduce for mobile if necessary
+
+10. FINAL CHECK
+- All headings and body text clearly readable
+- Dark navy is dominant accent color
+- Cards and buttons interactive with navy hover effects
+- Visual hierarchy consistent
+- Spacing and padding feel comfortable and premium
+- All sections maintain original content and order
+- The site should look clean, modern, and professional like a premium SaaS landing page
+
+OUTPUT FORMAT:
+- Apply changes in CSS/Tailwind classes
+- Apply animations in CSS/Tailwind
+- Add images as described
+- Maintain all structure and content
+- Comment briefly on key UI/animation changes
