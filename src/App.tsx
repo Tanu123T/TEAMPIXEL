@@ -7,11 +7,12 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export default function App() {
+  console.log('App rendering');
   return (
-    <div className="min-h-screen relative bg-white">
+    <div className="min-h-screen w-full relative bg-white flex flex-col">
       <Navigation />
       
-      <main id="top">
+      <main id="top" className="flex-grow">
         <Hero />
         <div id="about">
           <About />

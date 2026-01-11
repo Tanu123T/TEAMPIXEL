@@ -23,13 +23,24 @@
   --radius: 1rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: #FFFFFF;
-  color: #1E293B;
-  font-family: 'Inter', system-ui, sans-serif;
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navy-gradient {
@@ -52,5 +63,5 @@ body {
 }
 
 .reveal-on-scroll {
-  opacity: 1; /* Ensure visible by default, use framer-motion for animations */
+  opacity: 1;
 }
