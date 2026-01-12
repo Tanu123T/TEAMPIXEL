@@ -3,11 +3,11 @@ import { ArrowRight, Sparkles, Zap, Star } from 'lucide-react';
 import { Button } from './ui/button';
 import { useRef, useState, useEffect } from 'react';
 
-// Using actual base64 strings provided by the user
+// Using PNG images from public folder
 const heroImages = [
-  "attached_assets/Pasted-data-image-jpeg-base64-9j-4AAQSkZJRgABAQAAAQABAAD-2wCEA_1768154859527.txt",
-  "attached_assets/Pasted-data-image-jpeg-base64-9j-4AAQSkZJRgABAQAAAQABAAD-2wCEA_1768154895532.txt",
-  "attached_assets/Pasted-data-image-jpeg-base64-9j-4AAQSkZJRgABAQAAAQABAAD-2wCEA_1768154928511.txt"
+  "/hero-images/image1.png",
+  "/hero-images/image2.png",
+  "/hero-images/image3.png"
 ];
 
 export function Hero() {
@@ -24,21 +24,8 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   useEffect(() => {
-    // Load the base64 content from the provided files
-    const loadImages = async () => {
-      try {
-        const loadedImages = await Promise.all(
-          heroImages.map(async (path) => {
-            const response = await fetch('/' + path);
-            return await response.text();
-          })
-        );
-        setImages(loadedImages);
-      } catch (error) {
-        console.error("Error loading hero images:", error);
-      }
-    };
-    loadImages();
+    // Set the image paths directly
+    setImages(heroImages);
 
     const interval = setInterval(() => {
       setImageIndex((prev) => (prev + 1) % heroImages.length);
