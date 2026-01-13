@@ -7,7 +7,6 @@ import {
   Rocket, 
   BarChart, 
   RefreshCw,
-  ArrowRight,
   CheckCircle2
 } from 'lucide-react';
 

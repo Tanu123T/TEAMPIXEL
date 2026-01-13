@@ -1,27 +1,6 @@
-import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import { TrendingUp, Users, Award, Zap, Globe, Clock, Target, DollarSign } from 'lucide-react';
-
-function AnimatedCounter({ value, suffix = '', duration = 2 }: { value: number; suffix?: string; duration?: number }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: duration * 1000 });
-  const rounded = useTransform(springValue, (latest) => Math.round(latest));
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, motionValue, value]);
-
-  return (
-    <span ref={ref}>
-      <motion.span>{rounded}</motion.span>
-      {suffix}
-    </span>
-  );
-}
 
 const mainStats = [
   {
@@ -99,8 +78,42 @@ export function StatsSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="space-y-16"
         >
-          
           {/* Main stats grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {mainStats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="p-8 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 rounded-3xl hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/10 hover:border-blue-500/40 transition-all duration-300 group"
+                >
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${stat.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className="size-8 text-white" />
+                  </div>
+                  <div className="space-y-2">
+                    <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                      {stat.value}{stat.suffix}
+                    </div>
+                    <div className="text-lg font-semibold text-blue-200">
+                      {stat.label}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {stat.description}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
           
           {/* Additional stats */}
           <motion.div

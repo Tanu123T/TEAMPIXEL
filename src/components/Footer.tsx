@@ -15,7 +15,7 @@ export function Footer() {
   const socialLinks = [
     { icon: Facebook, label: 'Facebook', href: '#' },
     { icon: Twitter, label: 'Twitter', href: '#' },
-    { icon: Instagram, label: 'Instagram', href: '#' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/team.pixell24/' },
     { icon: Linkedin, label: 'LinkedIn', href: '#' },
   ];
 

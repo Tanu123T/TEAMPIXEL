@@ -6,8 +6,7 @@ import {
   Code2, 
   TrendingUp, 
   ShoppingCart, 
-  Palette,
-  ArrowRight
+  Palette
 } from 'lucide-react';
 
 const services = [
@@ -61,65 +60,69 @@ export function Expertise() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative bg-[#F8FAFC] overflow-hidden">
-      {/* Abstract Design Elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0F2A44]/5 rounded-full blur-[120px] -mr-64 -mt-64" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1E3A8A]/5 rounded-full blur-[100px] -ml-48 -mb-48" />
+    <section ref={ref} className="py-20 sm:py-28 md:py-36 px-4 sm:px-6 relative interactive-bg overflow-hidden">
+      {/* Enhanced Abstract Design Elements */}
+      <div className="absolute top-[-15%] right-[-8%] w-[45%] h-[70%] bg-[#0F2A44]/10 rounded-full blur-[180px] pointer-events-none animate-pulse" />
+      <div className="absolute bottom-[-15%] left-[-8%] w-[35%] h-[55%] bg-[#1E3A8A]/10 rounded-full blur-[150px] pointer-events-none animate-pulse" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-[40%] left-[50%] w-[25%] h-[35%] bg-[#172554]/8 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDelay: '6s' }} />
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="space-y-16 sm:space-y-24">
-          <div className="text-center space-y-4 sm:space-y-6">
+      {/* Floating Particles */}
+      <div className="floating-particles">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-30">
+        <div className="space-y-20 sm:space-y-28">
+          <div className="text-center space-y-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              className="inline-flex items-center px-3 sm:px-4 py-1.5 rounded-full bg-white border border-[#0F2A44]/10 shadow-sm"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-luxury border border-[#0F2A44]/10 text-[#0F2A44] text-sm font-semibold shadow-lg magnetic"
             >
-              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-[#0F2A44] uppercase">Capabilities</span>
+              <span>Capabilities</span>
             </motion.div>
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-[#0F2A44] tracking-tight leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0F2A44] tracking-tight leading-tight text-reveal"
             >
-              Driven by <span className="text-gradient-navy">Precision.</span>
+              Driven by <span className="text-gradient-navy font-black italic">Precision.</span>
             </motion.h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 40 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  whileHover={{ y: -10 }}
-                  className="p-10 bg-white border border-[#0F2A44]/10 rounded-[2.5rem] relative group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#0F2A44]/10"
+                  transition={{ delay: index * 0.15, duration: 0.6 }}
+                  className="premium-card p-10 rounded-[3rem] relative group overflow-hidden min-h-[400px] flex flex-col justify-between"
                 >
-                  <div className={`size-16 rounded-2xl ${service.color} flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-black/10`}>
-                    <Icon className="size-8 text-white" />
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <h3 className="text-2xl font-bold text-[#0F2A44] tracking-tight group-hover:translate-x-1 transition-transform">
-                      {service.title}
-                    </h3>
-                    {service.note && (
-                      <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-[10px] font-black text-[#475569] uppercase tracking-widest border border-slate-200">
-                        {service.note}
-                      </span>
-                    )}
-                    <p className="text-[#475569] leading-relaxed text-lg">
-                      {service.description}
-                    </p>
+                  <div className="space-y-8">
+                    <div className={`size-18 rounded-3xl ${service.color} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl shadow-black/15 magnetic`}>
+                      <Icon className="size-9 text-white" />
+                    </div>
                     
-                    <div className="pt-6 border-t border-slate-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-xs font-bold text-[#0F2A44] uppercase tracking-wider">
-                        Strategic Execution
-                      </div>
-                      <ArrowRight className="size-4 text-[#0F2A44] group-hover:translate-x-2 transition-transform duration-300" />
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold text-[#0F2A44] tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                        {service.title}
+                      </h3>
+                      {service.note && (
+                        <span className="inline-block px-4 py-2 rounded-full glass-luxury text-xs font-black text-[#475569] uppercase tracking-widest border border-[#0F2A44]/10 shadow-sm">
+                          {service.note}
+                        </span>
+                      )}
+                      <p className="text-[#475569] leading-relaxed text-lg font-medium">
+                        {service.description}
+                      </p>
                     </div>
                   </div>
                 </motion.div>

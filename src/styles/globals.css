@@ -57,6 +57,7 @@ body {
 
 .text-gradient-navy {
   background: linear-gradient(135deg, #0F2A44 0%, #1E3A8A 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -89,26 +90,214 @@ body {
   opacity: 1;
 }
 
-/* Sophisticated Hover Glow */
-.glow-on-hover {
-  position: relative;
-  transition: all 0.5s ease;
+/* Enhanced Luxury Animations */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
 }
 
-.glow-on-hover::after {
+@keyframes pulse-glow {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(15, 42, 68, 0.3);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(15, 42, 68, 0.6);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-0.5deg); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Luxury Button Effects */
+.luxury-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0F2A44 0%, #1E3A8A 50%, #172554 100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-button::before {
   content: '';
   position: absolute;
-  inset: -1px;
-  background: linear-gradient(45deg, #0F2A44, #1E3A8A, #3B82F6);
-  z-index: -1;
-  opacity: 0;
-  border-radius: inherit;
-  transition: opacity 0.5s ease;
-  filter: blur(10px);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
 }
 
-.glow-on-hover:hover::after {
-  opacity: 0.25;
+.luxury-button:hover::before {
+  left: 100%;
+}
+
+.luxury-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(15, 42, 68, 0.3);
+}
+
+/* Premium Card Effects */
+.premium-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(15, 42, 68, 0.08);
+  box-shadow: 
+    0 8px 32px rgba(15, 42, 68, 0.08),
+    0 2px 8px rgba(15, 42, 68, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(15, 42, 68, 0.15),
+    0 8px 24px rgba(15, 42, 68, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Interactive Background */
+.interactive-bg {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(15, 42, 68, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(15, 42, 68, 0.03) 0%, transparent 50%);
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Floating Particles */
+.floating-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(15, 42, 68, 0.1);
+  border-radius: 50%;
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { 
+  width: 4px; height: 4px; 
+  top: 10%; left: 10%; 
+  animation-delay: 0s; 
+}
+.particle:nth-child(2) { 
+  width: 6px; height: 6px; 
+  top: 20%; left: 80%; 
+  animation-delay: 1s; 
+}
+.particle:nth-child(3) { 
+  width: 3px; height: 3px; 
+  top: 60%; left: 30%; 
+  animation-delay: 2s; 
+}
+.particle:nth-child(4) { 
+  width: 5px; height: 5px; 
+  top: 80%; left: 70%; 
+  animation-delay: 3s; 
+}
+.particle:nth-child(5) { 
+  width: 4px; height: 4px; 
+  top: 40%; left: 50%; 
+  animation-delay: 4s; 
+}
+
+/* Enhanced Glass Effect */
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(15, 42, 68, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Magnetic Hover Effect */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: text-reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes text-reveal {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Focus States */
+.focus-luxury:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(15, 42, 68, 0.2);
+  transform: scale(1.02);
+}
+
+/* Loading Animation */
+.loading-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.loading-dots span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0F2A44;
+  animation: loading-dots 1.4s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+.loading-dots span:nth-child(3) { animation-delay: 0s; }
+
+@keyframes loading-dots {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
 }
 
 /* Mobile Optimizations */
